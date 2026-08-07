@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ===========================
+   CONFIGURACIÓN GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#ffffff;
+    color:#1D1D1B;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    width:90%;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    display:flex;
+    align-items:center;
+    min-height:70vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.bg{
+    position:absolute;
+    width:700px;
+    top:0;
+    right:0;
+    z-index:-1;
+}
+
+/* ===========================
+   MENÚ
+=========================== */
+
+.menu{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 0;
+
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    color:#FF9000;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+#menu{
+    display:none;
+}
+
+.menu-icono{
+    width:28px;
+}
+
+.menu label{
+    display:none;
+    cursor:pointer;
+}
+
+.navbar ul{
+    display:flex;
+    gap:10px;
+}
+
+.navbar ul li a{
+    color:#1D1D1B;
+    font-size:17px;
+    font-weight:600;
+    padding:10px 18px;
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+    color:#FF9000;
+}
+
+/* ===========================
+   CARRITO
+=========================== */
+
+.submenu{
+    position:relative;
+}
+
+.submenu #carrito{
+    display:none;
+}
+
+.submenu:hover #carrito{
+
+    display:block;
+
+    position:absolute;
+
+    right:0;
+
+    top:100%;
+
+    min-width:420px;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(12px);
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+table{
+    width:100%;
+}
+
+th,
+td{
+    color:white;
+    padding:8px;
+    text-align:center;
+}
+
+.borrar{
+
+    background:#FF9000;
+
+    color:white;
+
+    border-radius:50%;
+
+    padding:5px 10px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   CONTENIDO HEADER
+=========================== */
+
+.header-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.header-txt{
+
+    width:50%;
+
+}
+
+.header-txt h1{
+
+    font-size:58px;
+
+    line-height:65px;
+
+    margin-bottom:30px;
+
+}
+
+.header-txt span{
+
+    color:#FF9000;
+
+}
+
+.header-txt p{
+
+    color:#666;
+
+    font-size:17px;
+
+    margin-bottom:35px;
+
+}
+
+.header-img{
+
+    width:50%;
+
+    text-align:right;
+
+}
+
+.header-img img{
+
+    width:650px;
+
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+.btn-1{
+
+    display:inline-block;
+
+    padding:14px 42px;
+
+    background:#FF9000;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+.btn-1:hover{
+
+    background:#EF8700;
+
+}
+
+/* ==========================================
+   SECCIÓN PRODUCTOS
+========================================== */
+
+.products{
+    padding:70px 0;
+}
+
+.products h2{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:50px;
+}
+
+/* Contenedor del catálogo */
+
+.box-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+/* Tarjeta */
+
+.producto-card{
+
+    background:#fff;
+
+    border:1px solid #e5e5e5;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    min-height:500px;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.producto-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/* Imagen */
+
+.producto-card img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+}
+
+/* Nombre */
+
+.producto-card h3{
+
+    font-size:24px;
+
+    text-align:center;
+
+    color:#222;
+
+    margin-bottom:15px;
+
+    min-height:60px;
+
+}
+
+/* Descripción */
+
+.producto-card p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:25px;
+
+}
+
+/* Hace que la descripción ocupe el mismo espacio */
+
+.producto-card p:first-of-type{
+
+    min-height:80px;
+
+}
+
+/* Precio */
+
+.precio{
+
+    font-size:25px;
+
+    color:#e74c3c;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+/* Botón */
+
+.producto-card .btn-1{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-top:auto;
+
+}
+
+/* Producto agotado */
+
+.btn-3{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#999;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:not-allowed;
+
+}
+
+/* Hover botón agotado */
+
+.btn-3:hover{
+
+    background:#999;
+
+}
+
+#finalizar-compra{
+
+    display:block;
+
+    margin-top:15px;
+
+    text-align:center;
+
+}
