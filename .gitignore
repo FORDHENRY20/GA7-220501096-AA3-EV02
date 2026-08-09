@@ -1,0 +1,26 @@
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        web/images/Balinera.jpg
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-ISVJFBU MINGW64 ~/Documents/NetBeansProjects/WebApplication (main)
+$ touch .gitignore
+
+admin@DESKTOP-ISVJFBU MINGW64 ~/Documents/NetBeansProjects/WebApplication (main)
+$ code .gitignore
+
+admin@DESKTOP-ISVJFBU MINGW64 ~/Documents/NetBeansProjects/WebApplication (main)
+$
+
+
+
+
+
+
+
+
+
+
